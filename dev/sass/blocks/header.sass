@@ -12,7 +12,7 @@
   left: 0
   height: 40px
   overflow: hidden
-  background-color: $color-accent
+  background-color: $color-darkest
   +gs()
 
   &__languages,
@@ -45,7 +45,7 @@
   &__navcontrol
     display: none
     +gs-column(1)
-    color: $color-light
+    color: $color-accent
     line-height: 40px
     text-align: right
     border: none
@@ -59,7 +59,7 @@
     &:before
       display: inline-block
       margin-right: 10px
-      color: $color-light
+      color: $color-accent
       font-size: 20px
       transition: color .5s
 
@@ -71,7 +71,7 @@
       display: block
 
     &:hover, &:hover:before
-      color: $color-dark
+      color: $color-lightest
 
 // Second nav with anchor links and logo
 .second-nav
@@ -95,16 +95,16 @@
     bottom: 0
     left: 20px
     width: 80px
-    color: $color-light
+    color: $color-white
     font-size: 40px
     line-height: 80px
-    font-family: $font-sans
+    font-family: $font-montserrat
     letter-spacing: -5px
     font-weight: bold
     text-align: center
-    background-color: $color-accent
+    background-color: $color-darkest
     border: none
-    box-shadow: inset 0 1px 2px -1px $color-dark
+    box-shadow: inset 0 1px 2px -1px $color-darkest
 
     @media screen and (max-width: 960px)
       display: none
@@ -115,12 +115,14 @@
       bottom: -29px
       left: 0
       z-index: 250
-      border-top: 30px solid $color-accent
+      border-top: 30px solid $color-darkest
       border-left: 40px solid transparent
       border-right: 40px solid transparent
 
     & span
       position: relative
+      font-family: $font-montserrat
+      font-weight: 300 
       display: block
       width: 100%
       height: 100%
@@ -168,23 +170,27 @@
 
   & li
     display: inline-block
+    font-family: $font-hepta
     margin-left: 18px
 
     @media screen and (max-width: 800px)
       margin: 0 9px
       display: block
       margin: auto
-      border-bottom: 1px dashed $color-darken
+      border-bottom: 1px dashed $color-white
 
     & a
       line-height: 40px
-      font-size: 20px
-      transition: color .5s
+      color: $color-white !important
+      padding-right: 5px
+      font-family: $font-hepta
+      font-size: 16px
+      transition: color .3s
 
       @media screen and (max-width: 800px)
-        font-size: 18px
+        font-size: 16px
         border-bottom: none
 
       &.is-selected, &:hover
-        color: $color-darken
+        color: $color-lightest !important
         border: none
